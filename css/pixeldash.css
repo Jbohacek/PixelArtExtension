@@ -1,0 +1,296 @@
+html { height: 100%; }
+
+@font-face {
+	font-family: minecraftfont;
+	src: url('minecraftfont.ttf');
+}
+
+body {
+	margin: 0;
+	min-height: 100%;
+	font-family: minecraftfont;
+	transition: background 0.1s;
+}
+
+#dashboard {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	color: white;
+	text-shadow: 0 0 3px #000;
+	text-align: center;
+}
+
+#date {
+	position: absolute;
+	padding-top: 10px;
+	padding-left: 10px;
+	text-align: left;
+	opacity: 0.5;
+	transition: all 0.5s;
+}
+#date:hover { opacity: 1; }
+
+#weather {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-top: 10px;
+	padding-right: 10px;
+	text-align: right;
+	opacity: 0.5;
+	transition: all 0.5s;
+}
+#weather:hover { opacity: 1; }
+
+#temperature {
+	display: block;
+	font-size: 1.5em;
+	vertical-align: top;
+	line-height: 100%;
+}
+
+#place {
+	display: block;
+	padding-top: 5px;
+	font-size: 12px;
+	line-height: 100%;
+	vertical-align: top;
+	color: #aaa;
+}
+
+#centre {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	transform: translateY(-50%) translateX(-50%);
+	text-align: center;
+}
+
+#clock { font-size: 6em; }
+
+#greet { font-size: 2em; }
+#greet > button {
+	border: none;
+	font-family: minecraftfont;
+	font-size: 1em;
+	color: white;
+	background-color: transparent;
+	transition: all 1s;
+	text-shadow: 0 0 3px #000;
+}
+#greet > button:hover {
+	text-decoration: underline;
+}
+#nameInput input {
+	position: relative;
+	margin-top: 5px;
+	height: 2em;
+	border: none;
+	background-color: rgba(255, 255, 255, 0.4);
+	color: #000;
+	font-family: minecraftfont;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0.2s, opacity 0.2s;
+	padding: 0 5px;
+}
+#nameInput input::-webkit-input-placeholder {
+	text-align: center;
+	color: #444;
+}
+
+#artist {
+	position: absolute;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	bottom: 0;
+	text-align: left;
+}
+#artist:hover .author {
+	top: 0;
+	opacity: 1;
+}
+#artist:hover .title { opacity: 1; }
+#artist .author {
+	position: relative;
+	top: 10px;
+	padding-bottom: 5px;
+	opacity: 0.3;
+	transition: all 0.5s;
+}
+#artist .title {
+	position: relative;
+	opacity: 0;
+	transition: all 1s;
+	font-size: 0.75em;
+	color: #aaa;
+}
+
+#quote {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	-webkit-transform: translateY(-100%);
+	-webkit-transform: translateX(-50%);
+	transform: translateY(-100%);
+	transform: translateX(-50%);
+	max-width: 60%;
+	vertical-align: top;
+}
+#quote:hover #text { top: -15px; }
+#quote:hover #author { opacity: 1; }
+
+#text {
+	position: relative;
+	top: 0;
+	transition: all 0.5s;
+}
+
+#author {
+	position: relative;
+	bottom: 10px;
+	opacity: 0;
+	transition: all 1s;
+	color: #aaa;
+}
+
+#todo {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding-bottom: 20px;
+	padding-right: 20px;
+}
+
+#modal {
+	position: relative;
+	top: -10px;
+	width: 300px;
+	height: 100%;
+	background-color: rgba(27, 27, 27, 0.4);
+	box-shadow: 0 0 2px #000;
+	border-radius: 2px;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0.2s, opacity 0.2s;
+}
+#modal .title {
+	padding-left: 10px;
+	height: 35px;
+	background-color: rgba(27, 27, 27, 0.6);
+	line-height: 35px;
+	text-align: left;
+}
+#modal .title > span {
+	float: right;
+	padding-left: 2px;
+	width: 35px;
+	height: 100%;
+	transition: all 0.2s;
+	line-height: 30px;
+	text-align: center;
+}
+#modal .title > span.hide { background-color: rgba(150, 30, 30, 0.4); }
+#modal .title > span.hide:hover { background-color: rgba(150, 30, 30, 0.8); }
+#modal .title > span.new { background-color: rgba(30, 100, 30, 0.4); }
+#modal .title > span.new:hover { background-color: rgba(30, 150, 30, 0.8); }
+#modal input[type="text"] {
+	display: block;
+	margin: 0;
+	padding: 0 10px;
+	border: none;
+	border-radius: 1px;
+	width: 100%;
+	height: 0;
+	box-sizing: border-box;
+	background-color: rgba(255, 255, 255, 0.2);
+	font-family: minecraftfont;
+	font-size: 1em;
+	transition: all 0.2s;
+}
+#modal input[type="text"]::-webkit-input-placeholder { color: #222; }
+#modal ul {
+	margin: 0;
+	padding: 0;
+	overflow-x: auto;
+}
+#modal ul::-webkit-scrollbar { height: 6px; }
+#modal ul::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: transparent;
+	opacity: 0;
+	border-radius: 3px;
+}
+#modal ul::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.4);
+	outline: 1px solid slategrey;
+	border-radius: 3px;
+}
+#modal ul li {
+	padding: 0 10px 0 0;
+	height: 35px;
+	text-align: left;
+	list-style: none;
+	line-height: 35px;
+	white-space: nowrap;
+	transition: all 0.2s;
+}
+#modal ul li:hover span{
+	width: 35px;
+	opacity: 1;
+}
+#modal ul li span {
+	display: inline-block;
+	float: left;
+	margin-right: 10px;
+	padding-left: 2px;
+	width: 0;
+	height: 35px;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	line-height: 30px;
+	background-color: rgba(150, 30, 30, 0.4);
+	opacity: 0;
+	transition: all 0.2s;
+}
+#modal ul li span:hover { background-color: rgba(150, 30, 30, 0.8); }
+
+#open {
+	float: right;
+	padding: 0;
+	border: none;
+	width: 35px;
+	height: 35px;
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 2em;
+	opacity: 0.5;
+	transition: all 0.5s;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	line-height: 0;
+}
+#open:hover { opacity: 1; }
+
+.done {
+	color: gray;
+	text-decoration: line-through;
+}
+
+.visible {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+@media (max-width: 649px) {
+	#quote { display: none; }
+}
+
+@media (max-height: 399px) {
+	#quote { display: none; }
+}

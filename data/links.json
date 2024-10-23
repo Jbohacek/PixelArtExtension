@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "name": "HBO MAX",
+      "link": "https://www.max.com"
+    },
+    {
+      "name": "Youtube",
+      "link": "https://www.youtube.com"
+    },
+    {
+      "name": "Dáme jídlo",
+      "link": "https://www.damejidlo.cz"
+    },
+    {
+      "name": "Exarton",
+      "link": "https://exaroton.com"
+    },
+    {
+      "name": "GitHub",
+      "link": "https://github.com"
+    },
+    {
+      "name": "Trojský vrh",
+      "link": "https://www.trojsky-vrch.cz"
+    },
+    {
+      "name": "ČZU",
+      "link": "https://is.czu.cz"
+    },
+    {
+      "name": "MAL",
+      "link": "https://myanimelist.net"
+    },
+    {
+      "name": "Local AI",
+      "link": "http://localhost:8080"
+    }
+  ]
+}
