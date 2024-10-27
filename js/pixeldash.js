@@ -180,7 +180,8 @@ getBackground.onreadystatechange = function () {
     backgrounds = JSON.parse(this.responseText).data;
 
     // Get a backgrounds
-    backgroundIndex = Math.floor(Math.random() * backgrounds.length);
+    var rndNumber = Math.floor(Math.random() * backgrounds.length)
+    backgroundIndex = rndNumber;
     switchBackground(backgroundIndex);
   }
 };
@@ -236,14 +237,15 @@ function switchBackground(index) {
     backgrounds[index].file +
     '") center center / cover no-repeat fixed';
 
+  console.log("Switched Background to: " + backgrounds[index].title)
   // Fetch the dom elements that will be adjusted
   const artAuthor = document.querySelector(".author");
   const artTitle = document.querySelector(".title");
 
   // Set the art's author, title and preffered link
-  artAuthor.textContent = backgrounds[index].author;
-  artAuthor.href = authors[backgrounds[index].author].link;
-  artTitle.textContent = backgrounds[index].title;
+  artAuthor.textContent = backgrounds[index].title;
+  //artAuthor.href = authors[backgrounds[index].author].link;
+  artTitle.textContent = backgrounds[index].author;
 }
 
 // Quotes

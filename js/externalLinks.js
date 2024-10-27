@@ -10,7 +10,6 @@ async function loadItems() {
     //http://www.google.com/s2/favicons?domain=is.czu.cz/auth/
 
     data.items.forEach(item => {
-      console.log(item);
       var copyOfExample = document.getElementById('exampleLinkBox').cloneNode(true);
       copyOfExample.Id = "";
       copyOfExample.classList.remove('hidden');
@@ -21,7 +20,6 @@ async function loadItems() {
       const imgElement = document.createElement('img');
       imgElement.src = getLinkIcon + item.link.replace('https://', '') + '.ico';
       imgElement.setAttribute('data-link',item.link);
-      console.log(imgElement.src);
 
       document.getElementById('boxAdresses').appendChild(copyOfExample)
       copyOfExample.prepend(imgElement);

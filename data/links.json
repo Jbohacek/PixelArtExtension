@@ -29,8 +29,16 @@
       "link": "https://is.czu.cz"
     },
     {
+      "name": "Moodle",
+      "link": "https://moodle.czu.cz"
+    },
+    {
       "name": "MAL",
       "link": "https://myanimelist.net"
+    },
+    {
+      "name": "Local Synthing",
+      "link": "http://localhost:8384"
     },
     {
       "name": "Local AI",

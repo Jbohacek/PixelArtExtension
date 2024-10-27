@@ -1,8 +1,12 @@
 #boxAdresses{
   display: flex;
   justify-content: center;
-  gap: 3vw;
+  gap: 1vw;
   flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 1vw;
+  backdrop-filter: blur(5px);
+  padding: 10px;
 }
 
 .linkBox{
@@ -11,7 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1vh;
+  gap: 2vh;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -26,7 +30,7 @@
 }
 
 .linkBox:hover{
-  transform: scale(1.2);
+  /*transform: scale(1.2);*/
   cursor: url('assets/Link.png'), auto;
   background-color: rgba(150, 150, 150, 0.3);
   border-radius: 10px;
